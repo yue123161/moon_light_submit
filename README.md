@@ -61,7 +61,8 @@ The evaluation is performed following a hierarchical approach, with the followin
 
 - **Submission Opens:** December 20, 2024  
 - **Submission Deadline:** February 10, 2025  
-- **Winners Announced:** February 14, 2025  
+- **Winners Announced:** February 15, 2025
+- **Winners paper submission deadline:** March 1, 2025
 
 ---
 
