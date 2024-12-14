@@ -32,7 +32,7 @@ Despite its significance, this problem remains underexplored. This competition a
 
 ### Dataset Details  
 
-The dataset used in this competition is a subset of the publicly available Protein-Protein Association (PPA) dataset. We have selected 30% of the original dataset, focusing on 6 classes out of the 37 available in the full dataset. For more information about the PPA dataset, including its source and detailed description, please visit the official website or the relevant publication.
+The dataset used in this competition is a subset of the publicly available Protein-Protein Association (PPA) dataset. We have selected 30% of the original dataset, focusing on 6 classes out of the 37 available in the full dataset. For more information about the PPA dataset, including its source and detailed description, please visit the official website.
 
 ---
 
