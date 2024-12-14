@@ -39,11 +39,11 @@ The dataset used in this competition is a subset of the publicly available Prote
 ### Evaluation Criteria  
 
 The evaluation is performed following a hierarchical approach, with the following criteria:
-1.F1 score on the test dataset provided without ground truth.
-2.Accuracy  on the test dataset provided without ground truth.
-3.F1 score on the test set for evaluation, not provided to participants.
-4.Accuracy on the test set for evaluation, not provided to participants.
-5.Inference time measured as the total time taken to generate predictions for all test graphs on our machines.
+1. F1 score on the test dataset provided without ground truth.
+2. Accuracy  on the test dataset provided without ground truth.
+3. F1 score on the test set for evaluation, not provided to participants.
+4. Accuracy on the test set for evaluation, not provided to participants.
+5. Inference time measured as the total time taken to generate predictions for all test graphs on our machines.
 
 
 ---
