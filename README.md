@@ -45,6 +45,18 @@ The evaluation is performed following a hierarchical approach, with the followin
 4. Accuracy on the test set for evaluation, not provided to participants.
 5. Inference time measured as the total time taken to generate predictions for all test graphs on our machines.
 
+---
+
+### How to Run the Code  
+
+This code serves as an example of how to load a dataset and utilize it effectively for training and testing a GNN model:
+1. The main file contains the implementation of the GNN model.
+2. It uses the traindataset located in one of the data folders (A, B, C, or D) based on the path_train argument.
+3. The GNN model is trained on the specified traindataset from the folder corresponding to the path_train argument.
+4. After training, the code generates a CSV file for the test dataset, named based on the test_path argument.
+5. For example, if test_path points to folder B, the output file will be named testset_B.csv.
+6. If only the test_path argument is provided (without training), the code should generate the respective test dataset’s CSV file using the pre-trained   model.( This functionality is for you to implement).
+7. The data set can be download from https://drive.google.com/drive/folders/1Z-1JkPJ6q4C6jX4brvq1VRbJH5RPUCAk?usp=drive_link
 
 ---
 
