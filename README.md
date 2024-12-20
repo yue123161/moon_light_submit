@@ -13,10 +13,10 @@ Despite its significance, this problem remains underexplored. This competition a
 3. Submissions can be novel solutions or modifications of existing approaches, with clear references for prior work.  
 4. Submissions must include:  
    - A valid Pull Request on this GitHub page.  
-   - Predictions for all test datasets uploaded to the Hugging Face competition space.
+   - Predictions for all 4 test datasets uploaded to the Hugging Face competition space. The submission must be a gz folder containing 4 csv files.
    - The name of the submission must be the same in both the platforms.
 #### Submission Details on GitHub 
-- `main.py`: Script accepting the command `python main.py --test_path <path_to_testset>` and outputting `testset_name.csv`.  
+- `main.py`: Script accepting the command `python main.py --test_path <path_to_testset.json.gz> --train_path ,optional_path_to_train.json.gz>` and outputting `testset_name.csv`.  
 - Folders and Files:
   - `checkpoints/`: Model checkpoints (e.g., `model_epoch_10.pth`).  
   - `source/`: All implemented files (e.g., model and loss).  
