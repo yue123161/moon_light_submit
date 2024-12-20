@@ -13,32 +13,69 @@ Despite its significance, this problem remains underexplored. This competition a
 3. Submissions can be novel solutions or modifications of existing approaches, with clear references for prior work.  
 4. Submissions must include:  
    - A valid Pull Request on this GitHub page.  
-   - Predictions for all 4 test datasets uploaded to the Hugging Face competition space. The submission must be a gz folder containing 4 csv files.
+   - Predictions for all 4 test datasets uploaded to the [Hugging Face competition space](https://huggingface.co/spaces/NoisyGraphLabelsChallenge/LEARNINGWITHNOISYGRAPHLABELS). The submission must be a gz folder containing 4 csv files.
    - The name of the submission must be the same in both the platforms.
-#### Submission Details on GitHub 
-- `main.py`: Script accepting the command `python main.py --test_path <path_to_testset.json.gz> --train_path ,optional_path_to_train.json.gz>` and outputting `testset_name.csv`.  
-- Folders and Files:
-  - `checkpoints/`: Model checkpoints (e.g., `model_epoch_10.pth`).  
-  - `source/`: All implemented files (e.g., model and loss).  
-  - `solution_data/`: Predicted CSV files for the four test sets.  
-  - `logs/`: Logs for each training dataset, including accuracy and loss logged every 10 epochs.  
-  - `requirements.txt`: List of dependencies and Python version (e.g., `python==3.8.5`).  
-  - `README.md`: Description of the solution, including model architecture, training details, and plots of training accuracy.  
+   #### Submission Details on GitHub 
+   - `All submissions must follow the file and folder structure below:  
+   
+   - **`main.py`**  
+      - The script must accept the following command-line arguments:  
+        ```bash
+        python main.py --test_path <path_to_test.json.gz> --train_path <optional_path_to_train.json.gz>
+        ```
+      - **Behavior**:  
+        - If `--train_path` is provided, the script must train the model using the specified `train.json.gz` file.  
+        - If `--train_path` is not provided, the script should **only generate predictions** using the pre-trained model checkpoints provided.  
+        - The output must be a **CSV file** named as:  
+          ```
+          testset_<foldername>.csv
+          ```  
+          Here, `<foldername>` corresponds to the dataset folder name (e.g., `A`, `B`, `C`, or `D`).  
+        - Ensure the correct mapping between test and training datasets:  
+          - Example: If `test.json.gz` is located in `./datasets/A/`, the script must use the pre-trained model that was trained on `./datasets/A/train.json.gz`.  
+   
+   - **Folder and File Naming Conventions**  
+     - `checkpoints/`: Directory containing trained model checkpoints. Use filenames such as:  
+       ```
+       model_<foldername>_epoch_<number>.pth
+       ```
+       Example: `model_A_epoch_10.pth`  
+     - `source/`: Directory for all implemented code (e.g., models, loss functions, data loaders).  
+     - `submission/`: Folder containing the predicted CSV files for the four test sets:  
+       ```
+       testset_A.csv, testset_B.csv, testset_C.csv, testset_D.csv
+       ```  
+     - `logs/`: Log files for **each training dataset**. Include logs of accuracy and loss recorded every **10 epochs**.  
+     - `requirements.txt`: A file listing all dependencies and the Python version. Example:  
+       ```
+       python==3.8.5
+       torch==1.10.0
+       numpy==1.21.0
+       ```  
+     - `README.md`: A clear and concise description of the solution, including:  
+       - Image teaser explaning the procedure
+       - Overview of the method 
 
 5. Winning models and code must be open-sourced and publicly available.  
 6. Multiple submissions per group are allowed, but the top-performing model will determine leaderboard ranking.
 7. Ensure that your solution is fully reproducible. Include any random seeds or initialization details used to ensure consistent results (e.g., `torch.manual_seed()` or `np.random.seed()`) and If using a pre-trained model, include the instructions for downloading or specifying the model path.
+8. Multiple submissions per team or individual are allowed. However, only the **top-performing model** will count towards the leaderboard.
+9. **Submission Limits**:
+   - Teams or individuals can submit **up to 4 submissions per day**. 
+   - Multiple submissions are allowed, but only the **best-performing** model will count toward the leaderboard.
+
 ---
 
 ### Dataset Details  
 
-The dataset used in this competition is a subset of the publicly available Protein-Protein Association (PPA) dataset. We have selected 30% of the original dataset, focusing on 6 classes out of the 37 available in the full dataset. For more information about the PPA dataset, including its source and detailed description, please visit the official website.
+The dataset used in this competition is a subset of the publicly available Protein-Protein Association (PPA) dataset. We have selected 30% of the original dataset, focusing on 6 classes out of the 37 available in the full dataset. For more information about the PPA dataset, including its source and detailed description, please visit the [Hugging Face competition space](https://huggingface.co/spaces/NoisyGraphLabelsChallenge/LEARNINGWITHNOISYGRAPHLABELS).
 
 ---
 
 ### Evaluation Criteria  
 
-The evaluation is performed following a hierarchical approach, with the following criteria:
+The evaluation is performed following a hierarchical approach, where the first criterion serves as the primary measure of success. The second criterion will only be applied if two or more models achieve equal results on the first criterion and so on. 
+The criteria are the following:
 1. F1 score on the test dataset provided without ground truth.
 2. Accuracy  on the test dataset provided without ground truth.
 3. F1 score on the test set for evaluation, not provided to participants.
