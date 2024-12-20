@@ -108,7 +108,7 @@ This code serves as an example of how to load a dataset and utilize it effective
 
 ### Competition Timeline  
 
-- **Submission Opens:** December 20, 2024  
+- **Submission Opens:** December 23, 2024  
 - **Submission Deadline:** February 10, 2025  
 - **Winners Announced:** February 15, 2025
 - **Winners paper submission deadline:** March 1, 2025
