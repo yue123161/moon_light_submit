@@ -35,17 +35,12 @@ def dictToGraphObject(graph_dict):
     edge_index = torch.tensor(graph_dict["edge_index"], dtype=torch.long)
     edge_attr = torch.tensor(graph_dict["edge_attr"], dtype=torch.float) if graph_dict["edge_attr"] else None
     num_nodes = graph_dict["num_nodes"]
-    y = torch.tensor(graph_dict["y"], dtype=torch.long) if graph_dict["y"] is not None else None
+    y = torch.tensor(graph_dict["y"][0], dtype=torch.long) if graph_dict["y"] is not None else None
     return Data(edge_index=edge_index, edge_attr=edge_attr, num_nodes=num_nodes, y=y)
 
 
 
-# root = "./data"  # path to folder which contains dataset.
-# filetrain= "0.2_train.json.gz"  # Train dataset file name 
-# filetest= "0.2_test.json.gz"    # Test dataset file name
 
-# train_dataset = GraphDataset(root,filetrain) # created the example train_dataset
-# test_dataset = GraphDataset(root,filetest) #created the example test_dataset
 
 
 
