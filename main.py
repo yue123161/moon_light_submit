@@ -39,7 +39,7 @@ def train(data_loader):
         data = data.to(device)
         optimizer.zero_grad()
         output = model(data)
-        loss = criterion(output, data.y.reshape(data.y.shape[0]))
+        loss = criterion(output, data.y)
         loss.backward()
         optimizer.step()
         total_loss += loss.item()
@@ -58,7 +58,7 @@ def evaluate(data_loader, calculate_accuracy=False):
             pred = output.argmax(dim=1)
             predictions.extend(pred.cpu().numpy())
             if calculate_accuracy:
-                correct += (pred == data.y.reshape(data.y.shape[0])).sum().item()
+                correct += (pred == data.y).sum().item()
                 total += data.y.size(0)
     if calculate_accuracy:
         accuracy = correct / total
