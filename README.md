@@ -39,7 +39,10 @@ Despite its significance, this problem remains underexplored. This competition a
        ```
        model_<foldername>_epoch_<number>.pth
        ```
-       Example: `model_A_epoch_10.pth`  
+       Example: `model_A_epoch_10.pth` 
+
+       Save at least 5 checkpoints for each model.
+
      - `source/`: Directory for all implemented code (e.g., models, loss functions, data loaders).  
      - `submission/`: Folder containing the predicted CSV files for the four test sets:  
        ```
