@@ -63,7 +63,7 @@ Despite its significance, this problem remains underexplored. This competition a
 9. **Submission Limits**:
    - Teams or individuals can submit **up to 4 submissions per day**. 
    - Multiple submissions are allowed, but only the **best-performing** model will count toward the leaderboard.
-10. **Note:** use the zipthe folder.py to create submission.gz from submission folder for submission to hugging face.
+10. **Note:** use the `zipthefolder.py` to create submission.gz from submission folder for submission to hugging face.
 ---
 
 ### Dataset Details  
