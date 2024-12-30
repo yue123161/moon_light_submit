@@ -3,9 +3,8 @@
 Handling noisy data is a persistent issue in machine learning, but it takes on a unique complexity in the context of graph structures. In domains where graph data is prevalent—such as social networks, biological networks, and financial systems—noisy labels can significantly degrade model performance, leading to unreliable predictions.  
 
 Despite its significance, this problem remains underexplored. This competition addresses this gap by investigating graph classification under label noise. We believe it could drive major advancements in both research and real-world applications.
-
-[Our website](https://sites.google.com/view/learning-with-noisy-graph-labe?usp=sharing)
 ---
+[Competition website](https://sites.google.com/view/learning-with-noisy-graph-labe?usp=sharing)
 
 ### Rules for Participation  
 
