@@ -5,6 +5,9 @@ Handling noisy data is a persistent issue in machine learning, but it takes on a
 Despite its significance, this problem remains underexplored. This competition addresses this gap by investigating graph classification under label noise. We believe it could drive major advancements in both research and real-world applications.
 
 ---
+
+**Competition Papers**: the top teams (up to 3)  can submit a paper that will be reviewed and can be considered for publication in the IJCNN 2025 Proceedings on IEEE Xplore. Other participants can also submit a 2-to-4 page paper to be considered as poster presentation at the conference but not to be included in the proceedings.
+
 [Competition website](https://sites.google.com/view/learning-with-noisy-graph-labe?usp=sharing)
 
 ### Rules for Participation  
