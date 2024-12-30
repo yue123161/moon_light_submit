@@ -4,6 +4,7 @@ Handling noisy data is a persistent issue in machine learning, but it takes on a
 
 Despite its significance, this problem remains underexplored. This competition addresses this gap by investigating graph classification under label noise. We believe it could drive major advancements in both research and real-world applications.
 
+[Our website](https://sites.google.com/view/learning-with-noisy-graph-labe?usp=sharing)
 ---
 
 ### Rules for Participation  
